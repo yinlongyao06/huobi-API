@@ -1,7 +1,6 @@
 
 from HuobiServices import *
 
-print(round(13.99999999, 2))
 print("Account Information: ",get_accounts())
 
 balance=get_balance()
@@ -113,35 +112,3 @@ if coin_margin_avaliable_amount >= coin_upper_limit:
             coin_amount_needed_delete = 0
             j = j + 1
             break
-
-
-
-#loan_orders=loan_orders(pair,coin, start_date="", end_date="", start="", direct="next", size="")
-#print(loan_orders)
-#coin_amount_needed_delete = coin_current_trade_amount - coin_upper_limit
-#coin_amount_needed_delete = coin_upper_limit*11
-#print('Please sell', coin_amount_needed_delete, ' ', coin)
-#找到order list
-#order_list=list()
-#amount_list=list()
-#order_length=len(loan_orders['data'])
-#print('order_length', order_length)
-#for i in range(order_length):
-#    order=loan_orders['data'][i]['id']
-#    amount=float(loan_orders['data'][i]["loan-balance"])
-#    order_list.append(order)
-#    amount_list.append(amount)
-
-#j=0
-#while coin_amount_needed_delete >= 0 and j < order_length:
-#    if coin_amount_needed_delete >= amount_list[j]:
-#        repay=repay_margin(order_list[j], amount_list[j])
-#        print('repay',repay)
-#        coin_amount_needed_delete=coin_amount_needed_delete-amount_list[j]
-#        j=j+1
-#    else:
-#        repay = repay_margin(order_list[j], coin_amount_needed_delete)
-#        print('repay', repay)
-#        coin_amount_needed_delete = 0
-#        j = j + 1
-#        break
